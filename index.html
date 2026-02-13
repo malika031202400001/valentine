@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💕 untuk cewek-cewek kece 💕</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(145deg, #fbe9f0, #ffe4ed, #ffe0f0, #fcd9e8);
+      background-size: 400% 400%;
+      animation: softGlow 14s ease infinite;
+      font-family: 'Poppins', 'Segoe UI', 'Comic Neue', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow-x: hidden;
+      padding: 15px;
+    }
+
+    @keyframes softGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Background unyu (karakter lucu bertebaran) */
+    .floating-cute {
+      position: fixed;
+      font-size: 2.5rem;
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 1;
+      animation: wobble 18s infinite alternate;
+    }
+
+    @keyframes wobble {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(20px, -15px) rotate(5deg); }
+      50% { transform: translate(-10px, 20px) rotate(-3deg); }
+      75% { transform: translate(15px, 10px) rotate(4deg); }
+      100% { transform: translate(0, 0) rotate(0deg); }
+    }
+
+    .main-box {
+      width: 100%;
+      max-width: 680px;
+      background: rgba(255, 250, 250, 0.6);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 70px 70px 50px 50px;
+      padding: 2rem 1.8rem 2.8rem;
+      box-shadow: 0 30px 40px rgba(255, 140, 200, 0.3), 0 0 0 4px rgba(255, 255, 255, 0.8) inset;
+      border: 2px solid #fff5fb;
+      z-index: 20;
+      transition: 0.3s;
+    }
+
+    .header-unyu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      font-size: 2.2rem;
+      background: linear-gradient(135deg, #ff92b0, #f56b9c);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .sub-for-girls {
+      background: #ffd5e2;
+      border-radius: 60px;
+      padding: 12px 28px;
+      width: fit-content;
+      margin: 0 auto 20px;
+      border: 3px solid white;
+      box-shadow: 0 6px 0 #d7799b;
+      color: #932d52;
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+
+    /* Banyak tombol - area 1 */
+    .button-zone {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      margin: 25px 0 20px;
+    }
+
+    .cute-btn {
+      background: white;
+      border: 4px solid #ffa5c3;
+      color: #b53b60;
+      padding: 15px 20px;
+      border-radius: 90px;
+      font-size: 1.3rem;
+      font-weight: 600;
+      box-shadow: 0 8px 0 #e58dab;
+      cursor: pointer;
+      transition: 0.08s linear;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1 1 auto;
+      min-width: 160px;
+      justify-content: center;
+    }
+
+    .cute-btn:active {
+      transform: translateY(6px);
+      box-shadow: 0 2px 0 #e58dab;
+    }
+
+    .cute-btn.special {
+      background: #ffd3e0;
+      border-color: #ff789e;
+      color: #991f48;
+      box-shadow: 0 8px 0 #c45a7a;
+    }
+
+    /* Kotak respon / kejutan */
+    .response-box {
+      background: #ffe9f1;
+      border-radius: 60px 60px 30px 30px;
+      padding: 25px 20px;
+      margin: 20px 0 25px;
+      border: 5px solid white;
+      box-shadow: 0 14px 0 #d2688a;
+      min-height: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .response-emoji {
+      font-size: 4.5rem;
+      filter: drop-shadow(0 8px 6px #ff80a8);
+      margin-bottom: 5px;
+    }
+
+    .response-text {
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: #421f2d;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 10px 25px;
+      border-radius: 60px;
+      display: inline-block;
+      max-width: 90%;
+    }
+
+    .response-sub {
+      font-size: 1.2rem;
+      color: #a13358;
+      margin-top: 8px;
+    }
+
+    /* Tombol kuis / tebak-tebakan */
+    .quiz-area {
+      background: #fec7dc;
+      border-radius: 50px;
+      padding: 20px 15px;
+      margin: 15px 0 25px;
+      border: 4px dashed white;
+    }
+
+    .quiz-title {
+      font-size: 1.6rem;
+      background: white;
+      padding: 8px 25px;
+      border-radius: 40px;
+      display: inline-block;
+      margin-bottom: 15px;
+      color: #b42d5c;
+      font-weight: 600;
+    }
+
+    .quiz-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .quiz-option {
+      background: #fff5f9;
+      border: 3px solid #ff89b1;
+      padding: 18px 25px;
+      border-radius: 50px;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #a7385b;
+      box-shadow: 0 6px 0 #db84a2;
+      cursor: pointer;
+      flex: 1 1 auto;
+      min-width: 140px;
+      transition: 0.08s;
+    }
+
+    .quiz-option:active {
+      transform: translateY(5px);
+      box-shadow: 0 1px 0 #db84a2;
+    }
+
+    /* Tombol pesan rahasia */
+    .secret-message-btn {
+      background: #ff98bb;
+      border: none;
+      color: white;
+      font-size: 1.8rem;
+      padding: 22px;
+      border-radius: 60px;
+      font-weight: bold;
+      width: 100%;
+      margin: 10px 0 5px;
+      box-shadow: 0 12px 0 #a93660;
+      border: 5px solid white;
+      cursor: pointer;
+      transition: 0.07s;
+    }
+
+    .secret-message-btn:active {
+      transform: translateY(8px);
+      box-shadow: 0 4px 0 #a93660;
+    }
+
+    .love-note {
+      margin-top: 20px;
+      background: #ffecf2;
+      border-radius: 40px;
+      padding: 20px;
+      font-size: 1.4rem;
+      border: 3px solid white;
+      color: #651f38;
+      display: none;
+    }
+
+    .love-note.show {
+      display: block;
+    }
+
+    footer {
+      color: #b74568;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+
+    /* Responsif */
+    @media (max-width: 500px) {
+      .cute-btn { font-size: 1.1rem; padding: 12px; min-width: 120px; }
+      .quiz-option { font-size: 1.1rem; padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Background unyu melayang -->
+<div class="floating-cute" style="top: 8%; left: 3%;">🦊</div>
+<div class="floating-cute" style="bottom: 12%; right: 1%;">🐻‍❄️</div>
+<div class="floating-cute" style="top: 70%; left: 10%;">🐰</div>
+<div class="floating-cute" style="top: 20%; right: 12%;">🐼</div>
+<div class="floating-cute" style="bottom: 30%; left: 20%;">🌸</div>
+<div class="floating-cute" style="top: 50%; right: 20%;">🍰</div>
+
+<div class="main-box">
+  <div class="header-unyu">
+    <span>💗</span> BUAT CEWEK-CEWEK LUCUU GUWEE <span>💗</span>
+  </div>
+  <div class="sub-for-girls">
+    ✨ yang udah punya pacar, tapi tetap spesial! ✨
+  </div>
+
+  <!-- BANYAK TOMBOL - AREA 1 (5 TOMBOL INTERAKTIF) -->
+  <div class="button-zone">
+    <button class="cute-btn" id="btn1"><span>🐣</span> lucu banget</button>
+    <button class="cute-btn" id="btn2"><span>🍰</span> cake manis</button>
+    <button class="cute-btn" id="btn3"><span>🌸</span> bunga lucu</button>
+    <button class="cute-btn" id="btn4"><span>💌</span> surat cinta</button>
+    <button class="cute-btn special" id="btn5"><span>✨</span> spesial kamu</button>
+  </div>
+
+  <!-- Kotak respon ATAS (untuk 5 tombol pertama) -->
+  <div class="response-box" id="responseBox">
+    <div class="response-emoji" id="responseEmoji">🫶</div>
+    <div class="response-text" id="responseMain">coba klik tombolnya!</div>
+    <div class="response-sub" id="responseSub">ada 5 tombol lucu di atas</div>
+  </div>
+
+  <!-- AREA KUIS / TEBak-tebakan (BANYAK TOMBOL LAGI) -->
+  <div class="quiz-area">
+    <div class="quiz-title">🤍 tebak-tebakan dulu lahhh 🤍</div>
+    <div class="quiz-buttons">
+      <button class="quiz-option" id="quiz1">siapa yg paling cantik?</button>
+      <button class="quiz-option" id="quiz2">siapa yg paling baik?</button>
+      <button class="quiz-option" id="quiz3">siapa yg paling lucu?</button>
+      <button class="quiz-option" id="quiz4">siapa yg paling unyuu?</button>
+    </div>
+    <div style="margin-top: 20px; background: white; border-radius: 30px; padding: 15px; font-size: 1.4rem; color:#ad2852; min-height: 60px;" id="quizAnswer">
+      🤔 klik salah satu jawaban
+    </div>
+  </div>
+
+  <!-- TOMBOL PESAN RAHASIA (BANYAK BANGET TOMBOLNYA KAN?) -->
+  <button class="secret-message-btn" id="secretBtn">
+    💌 klik untuk pesan rahasia 💌
+  </button>
+
+  <!-- Tempat pesan rahasia muncul -->
+  <div class="love-note" id="secretNote">
+    <p style="font-size: 1.7rem;">💖 untuk kamu yg spesial 💖</p>
+    <p style="margin: 10px 0;">"gatau gw mau ngomong apa, udalah yakk yang penting itulah pokoknya" 😘</p>
+    <p>✨ love you! ✨</p>
+  </div>
+
+  <!-- BONUS: TOMBOL LAIN LAGI (BIAR BENER-BENER BANYAK) -->
+  <div style="display: flex; gap: 10px; margin: 15px 0;">
+    <button class="cute-btn" style="flex:1;" id="bonus1">🐻 teddy bear</button>
+    <button class="cute-btn" style="flex:1;" id="bonus2">🎀 hadiah kecil</button>
+    <button class="cute-btn" style="flex:1;" id="bonus3">🦄 unicorn</button>
+  </div>
+
+  <!-- RESPONSE BOX KHUSUS UNTUK TOMBOL BONUS (MUNCUL DI BAWAH) -->
+  <div class="response-box" id="bonusResponseBox" style="margin-top: 5px; background: #ffe0f0;">
+    <div class="response-emoji" id="bonusEmoji">✨</div>
+    <div class="response-text" id="bonusMain">klik tombol bonus di atas</div>
+    <div class="response-sub" id="bonusSub">nanti muncul di sini</div>
+  </div>
+
+  <footer>
+    🌸 dari seseorang yang sayang kamu 🌸
+  </footer>
+</div>
+
+<script>
+  (function() {
+    // ========== 5 TOMBOL PERTAMA (RESPON ATAS) ==========
+    const btn1 = document.getElementById('btn1');
+    const btn2 = document.getElementById('btn2');
+    const btn3 = document.getElementById('btn3');
+    const btn4 = document.getElementById('btn4');
+    const btn5 = document.getElementById('btn5');
+    
+    const responseEmoji = document.getElementById('responseEmoji');
+    const responseMain = document.getElementById('responseMain');
+    const responseSub = document.getElementById('responseSub');
+
+    const responses = {
+      btn1: { emoji: '🐣', main: 'kamu lucu banget!', sub: 'emang beneran lucu 🥺' },
+      btn2: { emoji: '🍰', main: 'manis kayak cake!', sub: 'tapi kamu lebih manis 💕' },
+      btn3: { emoji: '🌸', main: 'bunga buat kamu', sub: 'mekar kayak senyumanmu' },
+      btn4: { emoji: '💌', main: 'surat cinta datang!', sub: 'dari pengagum rahasia 👀' },
+      btn5: { emoji: '✨', main: 'kamu spesial!', sub: 'jangan lupa bahagia yaa' }
+    };
+
+    btn1.addEventListener('click', () => {
+      responseEmoji.innerText = responses.btn1.emoji;
+      responseMain.innerText = responses.btn1.main;
+      responseSub.innerText = responses.btn1.sub;
+    });
+    btn2.addEventListener('click', () => {
+      responseEmoji.innerText = responses.btn2.emoji;
+      responseMain.innerText = responses.btn2.main;
+      responseSub.innerText = responses.btn2.sub;
+    });
+    btn3.addEventListener('click', () => {
+      responseEmoji.innerText = responses.btn3.emoji;
+      responseMain.innerText = responses.btn3.main;
+      responseSub.innerText = responses.btn3.sub;
+    });
+    btn4.addEventListener('click', () => {
+      responseEmoji.innerText = responses.btn4.emoji;
+      responseMain.innerText = responses.btn4.main;
+      responseSub.innerText = responses.btn4.sub;
+    });
+    btn5.addEventListener('click', () => {
+      responseEmoji.innerText = responses.btn5.emoji;
+      responseMain.innerText = responses.btn5.main;
+      responseSub.innerText = responses.btn5.sub;
+    });
+
+    // ========== KUIS (4 TOMBOL) ==========
+    const quiz1 = document.getElementById('quiz1');
+    const quiz2 = document.getElementById('quiz2');
+    const quiz3 = document.getElementById('quiz3');
+    const quiz4 = document.getElementById('quiz4');
+    const quizAnswer = document.getElementById('quizAnswer');
+
+    quiz1.addEventListener('click', () => {
+      quizAnswer.innerText = '🌸 jawabannya: KAMU! (iya kamu sendiri) 🌸';
+    });
+    quiz2.addEventListener('click', () => {
+      quizAnswer.innerText = '🍰 yang paling baik ya kamu dong! 🍰';
+    });
+    quiz3.addEventListener('click', () => {
+      quizAnswer.innerText = '🐣 ga usah ditanya, kamu yang paling lucu! 🐣';
+    });
+    quiz4.addEventListener('click', () => {
+      quizAnswer.innerText = '✨ KAMUUUU! cewek unyuu sedunia ✨';
+    });
+
+    // ========== TOMBOL PESAN RAHASIA ==========
+    const secretBtn = document.getElementById('secretBtn');
+    const secretNote = document.getElementById('secretNote');
+
+    secretBtn.addEventListener('click', () => {
+      secretNote.classList.toggle('show');
+      if (secretNote.classList.contains('show')) {
+        secretBtn.innerText = '💌 tutup pesan rahasia 💌';
+      } else {
+        secretBtn.innerText = '💌 klik untuk pesan rahasia 💌';
+      }
+    });
+
+    // ========== TOMBOL BONUS (RESPON DI BAWAH) ==========
+    const bonus1 = document.getElementById('bonus1');
+    const bonus2 = document.getElementById('bonus2');
+    const bonus3 = document.getElementById('bonus3');
+
+    // Ambil element untuk response box BAWAH
+    const bonusEmoji = document.getElementById('bonusEmoji');
+    const bonusMain = document.getElementById('bonusMain');
+    const bonusSub = document.getElementById('bonusSub');
+
+    bonus1.addEventListener('click', () => {
+      bonusEmoji.innerText = '🐻';
+      bonusMain.innerText = 'teddy bear buat kamu';
+      bonusSub.innerText = 'temenin kamu tidur yaa';
+    });
+
+    bonus2.addEventListener('click', () => {
+      bonusEmoji.innerText = '🎀';
+      bonusMain.innerText = 'hadiah kecil-kecilan';
+      bonusSub.innerText = 'tapi isinya sayang banget 💝';
+    });
+
+    bonus3.addEventListener('click', () => {
+      bonusEmoji.innerText = '🦄';
+      bonusMain.innerText = 'unicorn aja iri';
+      bonusSub.innerText = 'sama cantiknya kamu!';
+    });
+
+    // ========== FALLING UNYU-UNYU ==========
+    function createFalling() {
+      const div = document.createElement('div');
+      div.style.position = 'fixed';
+      div.style.top = '-20px';
+      div.style.left = Math.random() * 100 + '%';
+      div.style.fontSize = (Math.random() * 2 + 1.5) + 'rem';
+      div.style.opacity = '0.3';
+      div.style.pointerEvents = 'none';
+      div.style.zIndex = '5';
+      div.style.animation = `fallDown ${Math.random() * 5 + 7}s linear`;
+      const unyus = ['🌸','🐣','🍰','🦊','🐼','🐻‍❄️','🎀','💗','✨','🫧'];
+      div.innerText = unyus[Math.floor(Math.random() * unyus.length)];
+      document.body.appendChild(div);
+      setTimeout(() => div.remove(), 10000);
+    }
+
+    const style = document.createElement('style');
+    style.innerHTML = `
+      @keyframes fallDown {
+        0% { transform: translateY(0) rotate(0deg); opacity: 0.6; }
+        100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+      }
+    `;
+    document.head.appendChild(style);
+    setInterval(createFalling, 500);
+  })();
+</script>
+</body>
+</html>
